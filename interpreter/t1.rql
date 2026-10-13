@@ -1,0 +1,1 @@
+return LOAD("foo.ttl") UNION LOAD("bar.ttl")

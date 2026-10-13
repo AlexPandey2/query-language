@@ -1,0 +1,4 @@
+return JOIN(object, subject, S1, P1, O2,  
+    FILTER(predicate = <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>, LOAD("xyzzy.ttl")), 
+    FILTER(predicate = <http://www.w3.org/2000/01/rdf-schema#subClassOf>, LOAD("plugh.ttl"))
+    )

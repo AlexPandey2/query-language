@@ -1,0 +1,47 @@
+@base <http://example.org/> . 
+@prefix ont: <http://ont.example.org/> . 
+@prefix obj: <http://ont.example.org/> .
+--@prefix rdf : <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+--@prefix rdfs : <http://www.w3.org/2000/01/rdf-schema#> .
+--@prefix dc : <http://purl.org/dc/elements/1.1/> .
+--@prefix owl : <http://www.w3.org/2002/07/owl#> .
+--@prefix ex : <http://www.example.org/> .
+--@prefix xsd : <http://www.w3.org/2001/XMLSchema#> .
+
+-- TASK 7
+
+<http://example.org/jane> <http://ont.example.org/hasName> "Fred" .
+<http://example.org/jane> <http://ont.example.org/hasFriend> "Fredd" .
+<http://example.org/jane> <http://ont.example.org/hasName> "Sally" .
+<http://example.org/fred> <http://ont.example.org/hasName> "Freed" , "Sally" .
+<http://example.org/fred> <http://ont.example.org/hasFriend> "Sally", "Fred" .
+<http://example.org/abcd> <http://ont.example.org/hasName> "Abcd" .
+<http://example.org/abcd> <http://ont.example.org/hasFriend> "Sallyy" , "Fred" .
+
+-- TASK 8
+
+<http://example.org/jane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.org/fred> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.org/abcd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.org/efgh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.org/jane> <http://xmlns.com/foaf/0.1/knows> <http://example.org/nmg> .
+<http://example.org/fred> <http://xmlns.com/foaf/0.1/knows> <http://example.org/nmg> .
+
+-- TASK 9
+
+<http://example.org/alice> <http://www.w3.org/2002/07/owl#sameAs> <http://example.org/bob> .
+
+-- <http://example.org/fred> <http://www.w3.org/2002/07/owl#sameAs> <http://example.org/jane> .
+-- <http://example.org/jane> <http://www.w3.org/2002/07/owl#sameAs> <http://example.org/fred> .
+-- <http://example.org/jane> <http://www.w3.org/2002/07/owl#sameAs> <http://example.org/fred> .
+-- <http://example.org/abcd> <http://www.w3.org/2002/07/owl#sameAs> <http://example.org/jane> .
+
+-- obj:A <http://www.w3.org/2002/07/owl#sameAs> obj:B .
+-- obj:C <http://www.w3.org/2002/07/owl#sameAs> obj:B .
+-- obj:B <http://www.w3.org/2002/07/owl#sameAs> obj:D .
+
+-- TASK 10
+
+<http://example.org/jane> <http://purl.org/dc/elements/1.0/creator> <http://example.org/fred> .
+<http://example.org/fred> <http://purl.org/dc/elements/1.1/creator> <http://example.org/jane> .
+<http://example.org/jane> <http://purl.org/dc/elements/1.1/creator> <http://example.org/cbdd> .

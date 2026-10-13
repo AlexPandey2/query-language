@@ -1,0 +1,1 @@
+return (GROUP BY(subject, MAX(predicate = <http://example.org/ont/price>, LOAD("quux.ttl"))))

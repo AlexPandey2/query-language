@@ -1,0 +1,6 @@
+<http://example.org/a> <http://example.org/ont/price> 2 .
+<http://example.org/a> <http://example.org/ont/price> 7 .
+<http://example.org/a> <http://example.org/ont/price> 5 .
+<http://example.org/b> <http://example.org/ont/price> 1 .
+<http://example.org/b> <http://example.org/ont/price> 9 .
+<http://example.org/b> <http://example.org/ont/price> 3 .

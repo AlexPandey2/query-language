@@ -1,0 +1,1 @@
+return FILTER(predicate = <http://example.org/ont/hasAge> AND object >= 21, LOAD("baz.ttl"))

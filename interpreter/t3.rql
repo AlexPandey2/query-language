@@ -1,0 +1,1 @@
+return FILTER(predicate = <http://example.org/ont/studiesAt> AND object = <http://example.org/uos>, LOAD("qux.ttl")) UNION FILTER(predicate = <http://example.org/ont/worksFor> AND object = <http://example.org/uos>, LOAD("qux.ttl"))

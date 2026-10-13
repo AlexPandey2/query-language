@@ -1,0 +1,6 @@
+foo = LOAD("foo.ttl");
+bar = LOAD("bar.ttl");
+baz = LOAD("baz.ttl");
+foobar = foo UNION bar;
+diff = DIFFERENCE(foobar, baz);
+return diff

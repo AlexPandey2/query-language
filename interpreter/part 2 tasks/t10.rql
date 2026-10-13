@@ -1,0 +1,6 @@
+foo = LOAD("foo.ttl");
+creator0 = FILTER(predicate=<http://purl.org/dc/elements/1.0/creator>, foo);
+creator1 = FILTER(predicate=<http://purl.org/dc/elements/1.1/creator>, foo);
+matching = creator0 UNION creator1;
+renamed = RENAME(subject, <http://purl.org/dc/terms/creator>, object, matching);
+return renamed

@@ -1,0 +1,11 @@
+@base <http://example.org/> .
+@prefix ont : <http://example.org/ont/> .
+<person1> ont:hasAge 20 .
+<person1> ont:hasName "larry" .
+<person2> ont:hasAge 21 .
+<person3> ont:hasAge 23 .
+<person4> ont:doesntHaveAge 22 .
+<person5> ont:hasAge 22 .
+
+<http://example.org/nmg> <http://ont.example.org/worksFor> <http://example.org/uos> .
+<http://example.org/nmg> <http://ont.example.org/teaches> <http://example.org/comp2342> .

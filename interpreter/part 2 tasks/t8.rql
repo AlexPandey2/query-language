@@ -1,0 +1,6 @@
+foo = LOAD("foo.ttl");
+people = FILTER(predicate = <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> AND object = <http://xmlns.com/foaf/0.1/Person>, foo);
+knowsNmg = FILTER(predicate = <http://xmlns.com/foaf/0.1/knows> AND object = <http://example.org/nmg>, foo);
+joined = JOIN(subject, subject, S1, P1, O1, people, knowsNmg);
+diff = DIFFERENCE(people, joined);
+return diff

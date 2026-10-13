@@ -1,0 +1,9 @@
+foo = LOAD("foo.ttl");
+condition1 = FILTER(subject=<http://example.org/jane>, foo);
+condition2 = FILTER(predicate=<http://ont.example.org/hasName>, foo);
+condition3 = FILTER(object="Fred" OR object="Sally", foo);
+only1 = DIFFERENCE(condition1, (condition2 UNION condition3));
+only2 = DIFFERENCE(condition2, (condition1 UNION condition3));
+only3 = DIFFERENCE(condition3, (condition1 UNION condition2));
+union = only1 UNION only2 UNION only3;
+return union

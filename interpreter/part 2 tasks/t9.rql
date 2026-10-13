@@ -1,0 +1,6 @@
+foo = LOAD("foo.ttl");
+owl = FILTER(predicate = <http://www.w3.org/2002/07/owl#sameAs>, foo);
+joined1 = JOIN(object, object, S1, P1, S2, owl, owl);
+joined2 = JOIN(object, subject, S1, P1, O2, owl, owl);
+union = joined1 UNION joined2;
+return union
